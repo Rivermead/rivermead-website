@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Irresponsible Lending Claims | Rivermead Partnership</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D2340;--navy-mid:#1A3A5C;--navy-light:#2E5B8A;
+  --gold:#B8960C;--gold-light:#D4AF37;
+  --cream:#FAF8F4;--off-white:#F5F2EC;
+  --text:#1C1C1C;--muted:#6B6B6B;--border:#E0DAD0;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--cream);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,35,64,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(184,150,12,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--white);letter-spacing:0.02em;line-height:1.2}
+.nav-logo span{color:var(--gold-light);display:block;font-size:10px;font-weight:400;font-family:'DM Sans',sans-serif;letter-spacing:0.15em;text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;gap:36px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;letter-spacing:0.05em;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold-light)}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:10px 22px;font-weight:500!important;letter-spacing:0.08em!important;font-size:12px!important;text-transform:uppercase}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-toggle span{width:24px;height:1.5px;background:white;display:block;transition:0.3s}
+footer{background:var(--navy);padding:40px 5%;display:flex;align-items:flex-start;justify-content:space-between;border-top:1px solid rgba(184,150,12,0.15);flex-wrap:wrap;gap:24px}
+.footer-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--white)}
+.footer-logo span{display:block;font-size:10px;font-weight:400;font-family:'DM Sans',sans-serif;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:2px}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px 28px;max-width:500px}
+.footer-links a{font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;letter-spacing:0.05em}
+.footer-links a:hover{color:var(--gold-light)}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3);text-align:right;line-height:1.5}
+.gold-line{width:40px;height:2px;background:var(--gold);margin-bottom:32px}
+.prose{font-family:'Crimson Pro',serif;font-size:18px;line-height:1.8;color:var(--text);max-width:760px}
+.prose p{margin-bottom:20px}
+.prose h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);margin:32px 0 12px;font-weight:600}
+.prose ul{padding-left:24px;margin-bottom:20px}
+.prose li{margin-bottom:8px;color:var(--muted)}
+.page-hero{background:var(--navy);padding:120px 5% 60px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;bottom:-2px;left:0;right:0;height:4px;background:var(--gold)}
+@media(max-width:900px){.nav-links{display:none}.nav-toggle{display:flex}footer{flex-direction:column}.footer-copy{text-align:left}}
+.post-content{padding:60px 5%;max-width:800px;margin:0 auto}
+.post-content .prose p{margin-bottom:20px}
+.post-content .prose h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin:36px 0 14px;font-weight:600}
+.post-content .prose ul{padding-left:24px;margin-bottom:20px}
+.post-content .prose li{margin-bottom:8px}
+.post-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--gold);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:32px;font-weight:500}
+.post-back:hover{color:var(--gold-light)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">
+    The Rivermead Partnership
+    <span>Financial Expert Witness &amp; Regulatory Consultancy</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="blog.html">Insights</a>
+    <a href="index.html#contact" class="nav-cta">Request a Call</a>
+  </div>
+  <div class="nav-toggle" onclick="toggleMenu(this)">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="page-hero">
+  <div style="font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px">Irresponsible Lending</div>
+  <div style="width:40px;height:2px;background:var(--gold);margin-bottom:32px"></div>
+  <h1 style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);max-width:760px;font-weight:700;color:#FFFFFF;line-height:1.2">Irresponsible Lending Claims: When the Affordability Check Was Never Properly Done</h1>
+  <div style="display:flex;gap:20px;margin-top:16px;font-size:13px;color:rgba(255,255,255,0.5)">
+    <span>Simon Dorrell</span><span>March 2026</span><span>9 min read</span>
+  </div>
+</div>
+<div class="post-content">
+  <a href="blog.html" class="post-back">&larr; Back to Insights</a>
+  <div class="prose">
+    <p>Irresponsible lending claims represent a significant and growing area of consumer credit litigation. The legal basis is straightforward: the FCA's Consumer Credit sourcebook (CONC) imposed clear affordability obligations on lenders before credit could be extended. Where those obligations were not met — where the lender failed to carry out proper affordability checks, or extended credit despite those checks indicating the borrower could not afford to repay without undue difficulty — the lending was irresponsible, the charge and interest obligations fall away, and the borrower's liability is reduced to the capital borrowed. Nothing more.</p>
+
+    <h3>The Legal Basis: FCA CONC Affordability Rules</h3>
+    <p>The obligation to carry out proper affordability assessments before extending consumer credit is set out in the FCA's Consumer Credit sourcebook (CONC). CONC 5.2 requires lenders to undertake a reasonable assessment of whether the borrower can afford to repay the credit in a sustainable way — meaning without undue difficulty and without having to borrow further to meet repayments. The obligation applied before a credit agreement was entered into, before a credit limit was increased, and in relation to ongoing revolving credit facilities where the borrower's circumstances may have changed.</p>
+    <p>The affordability assessment must be based on sufficient information. A lender cannot satisfy CONC 5.2 by relying solely on a borrower's self-declared income without taking reasonable steps to verify it, or by ignoring information already held that indicates the borrower is in financial difficulty. The obligation is on the lender. The borrower does not bear the responsibility for the lender's failure to assess affordability properly.</p>
+    <p>The key authority on the application of these principles in practice is <em>Kerrigan v Elevate Credit International Ltd</em> [2020] EWHC 2169, in which the High Court confirmed that persistent and systematic failure to carry out proper affordability checks on revolving credit products constituted irresponsible lending within the meaning of CONC, and that the appropriate remedy was to reduce the borrower's liability to the capital sum borrowed.</p>
+
+    <h3>The Remedy: Capital Only — All Charges and Interest Returned</h3>
+    <p>The remedy in an irresponsible lending claim is clean and precise. The borrower owes the lender the capital that was advanced — the sum actually lent. Nothing else. All interest charged on the credit, all fees, all charges applied to the account over the life of the facility are returned to the borrower. If the borrower has already paid more than the capital borrowed, the excess is repayable by the lender.</p>
+    <p>This is not a discretionary remedy that varies with the degree of irresponsibility. Where irresponsible lending is established, the charges and interest fall away entirely. The lender lent money it should not have lent on terms it was not entitled to impose. The consequence is that only the money actually advanced remains owing.</p>
+    <p>The quantum calculation in an irresponsible lending case is therefore a straightforward accounting exercise: establish the capital advanced, calculate the total paid by the borrower across the life of the facility, and determine the difference. Where total payments exceed the capital, that excess is the amount to which the borrower is entitled. Where total payments are less than the capital, the outstanding balance is reduced to the difference between the capital and the amount already paid.</p>
+
+    <h3>What the Affordability Check Required</h3>
+    <p>CONC 5.2 did not prescribe a single method of affordability assessment. What it required was that the lender take reasonable steps to assess whether the borrower could afford to repay — steps proportionate to the amount of credit, the nature of the product, and the information available to the lender. In practice, a proper affordability assessment would typically involve verification of income, assessment of existing financial commitments, and consideration of the borrower's overall financial position at the point of application.</p>
+    <p>Many lenders — particularly in the high-cost short-term credit, revolving credit and catalogue account sectors — routinely failed to meet this standard. Credit was extended on the basis of minimal information, with no meaningful verification of income or expenditure. Limits were increased automatically on revolving products without any reassessment of whether the higher limit remained affordable. Credit was extended to borrowers who were already in arrears on other products with the same lender, or whose credit file disclosed existing financial difficulty.</p>
+    <p>The FCA's supervisory work in this sector, and the volume of successful FOS complaints, has established that irresponsible lending was systemic across a range of high-cost and revolving credit products in the years following the introduction of CONC. The claims pipeline is substantial.</p>
+
+    <h3>Rivermead's Role: File Analysis and Affordability Assessment</h3>
+    <p>The expert witness function in irresponsible lending claims is the forensic analysis of the borrower's financial file at the point of each lending decision. Rivermead's approach is to examine the information the lender held or should have obtained at the time credit was extended or a limit was increased, and to assess whether that information — properly analysed — would have indicated that the credit was affordable or unaffordable by reference to the CONC 5.2 standard.</p>
+    <p>This requires access to the borrower's credit file as it appeared at the relevant date, bank statements or income evidence where available, the lender's own records of the application process and the checks it carried out, and details of any other credit the borrower held at the time. The expert then applies the CONC affordability standard to that information and provides an opinion on whether a properly conducted affordability assessment would have approved or declined the credit.</p>
+    <p>Where the borrower held multiple credit products — as is common in high-cost and revolving credit cases — the analysis must be conducted at each decision point: the original application, each limit increase, and any point at which the lender should have reassessed affordability on the basis of information available to it. A single irresponsible lending decision is sufficient to ground a claim, but where there were multiple decision points, the expert report must address each one.</p>
+
+    <h3>Common Fact Patterns</h3>
+    <p>Irresponsible lending claims arise across a range of credit product types. The most common fact patterns Rivermead encounters in expert witness instructions include the following.</p>
+    <p>Revolving credit and catalogue accounts where limits were repeatedly increased without any reassessment of affordability, leaving borrowers with credit limits that bore no relationship to their income or existing financial commitments. High-cost short-term credit where loans were repeatedly rolled over or refinanced, with each new loan extended without any genuine consideration of whether the borrower could repay without incurring further debt. Personal loans extended to borrowers whose credit files disclosed existing arrears, defaults or high levels of existing debt, where a proper affordability check would have identified the lending as unaffordable. Buy-now-pay-later and store card facilities extended at the point of sale without any meaningful income verification, with limits increased on the basis of payment history alone rather than any assessment of affordability.</p>
+    <p>In each case, the expert's function is the same: assess what the lender knew or should have known, apply the CONC standard, and express an opinion on whether proper affordability checks were carried out and whether the credit should have been extended.</p>
+
+    <h3>What Law Firms Should Do Now</h3>
+    <ul>
+      <li>Obtain a full DSAR from the lender covering all application data, credit checks carried out, income information held and any internal affordability assessment records</li>
+      <li>Obtain the borrower's credit file as it appeared at each lending decision point — this is the core evidential document for the affordability assessment</li>
+      <li>Identify every decision point at which the lender extended credit or increased a limit — each is a separate affordability assessment that must be evaluated</li>
+      <li>Instruct an expert to assess whether the information held at each decision point, properly analysed, would have supported or declined the credit under CONC 5.2</li>
+      <li>Calculate quantum clearly — capital advanced versus total payments made, with the difference representing the borrower's entitlement where irresponsible lending is established</li>
+      <li>Consider the FOS route for lower-value claims, where the regulatory determination process can be faster and more cost-effective than court proceedings</li>
+    </ul>
+
+    <h3>Rivermead's Approach</h3>
+    <p>The Rivermead Partnership provides expert witness reports in irresponsible lending claims, covering forensic analysis of the borrower's financial position at each lending decision point and assessment of whether the lender's affordability checks met the standard required by FCA CONC. Our reports address each decision point individually, express a clear opinion on whether the credit should have been extended, and set out the quantum calculation — capital advanced, total payments made, and the amount to which the borrower is entitled on the basis that only the capital remains owing.</p>
+    <p>If you have irresponsible lending cases you wish to discuss, or instructions to place, please <a href="index.html#contact" style="color:var(--gold);text-decoration:none">request a call back</a> and we will be happy to advise.</p>
+  </div>
+  <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border)">
+    <a href="blog.html" class="post-back">&larr; Back to Insights</a>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">The Rivermead Partnership Ltd<span>Company No. 05084761 &middot; Registered in England &amp; Wales</span></div>
+  <div class="footer-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="blog.html">Insights</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="slavery.html">Modern Slavery</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 The Rivermead Partnership Ltd<br>Lancashire, United Kingdom</div>
+</footer>
+<script>
+function toggleMenu(btn){const links=document.querySelector('.nav-links');const open=links.style.display==='flex';links.style.cssText=open?'':'display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(13,35,64,0.98);padding:20px 5%;gap:20px;border-bottom:1px solid rgba(184,150,12,0.2)';btn.children[0].style.transform=open?'':'rotate(45deg) translate(5px,5px)';btn.children[1].style.opacity=open?'1':'0';btn.children[2].style.transform=open?'':'rotate(-45deg) translate(5px,-5px)';}
+</script>
+</body></html>
