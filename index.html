@@ -526,5 +526,21 @@ New call back request from rivermeadpartnership.co.uk<br><br>
   document.querySelector('.form-submit').style.display = 'none';
 }
 </script>
+<style>
+#cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--navy);border-top:2px solid var(--gold);padding:20px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;transform:translateY(100%);transition:transform 0.4s ease}
+#cookie-banner.show{transform:translateY(0)}
+.cookie-text{font-size:13px;color:rgba(255,255,255,0.8);max-width:720px;line-height:1.6}
+.cookie-text a{color:var(--gold-light);text-decoration:none}
+.cookie-buttons{display:flex;gap:12px}
+.cookie-accept{background:var(--gold);color:var(--navy);border:none;padding:10px 24px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer}
+.cookie-decline{background:transparent;color:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.2);padding:10px 24px;font-size:12px;cursor:pointer}
+</style>
+<div id="cookie-banner"><p class="cookie-text">We use cookies to ensure this website functions correctly. No tracking or advertising cookies are used. See our <a href="privacy.html">Privacy Policy</a>.</p><div class="cookie-buttons"><button class="cookie-decline" onclick="cookieDecline()">Decline</button><button class="cookie-accept" onclick="cookieAccept()">Accept</button></div></div>
+<script>
+(function(){function g(n){return document.cookie.split(';').some(c=>c.trim().startsWith(n+'='));}if(!g('rp_cookie_consent')){setTimeout(function(){document.getElementById('cookie-banner').classList.add('show');},600);}})();
+function cookieAccept(){document.cookie='rp_cookie_consent=accepted;max-age=31536000;path=/';document.getElementById('cookie-banner').classList.remove('show');}
+function cookieDecline(){document.cookie='rp_cookie_consent=declined;max-age=2592000;path=/';document.getElementById('cookie-banner').classList.remove('show');}
+</script>
+
 </body>
 </html>
