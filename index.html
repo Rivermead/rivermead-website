@@ -464,6 +464,7 @@ footer{background:var(--navy);padding:40px 5%;display:flex;align-items:flex-star
       </div>
       <div class="form-group"><label class="form-label">Brief Description</label><textarea class="form-input" id="f-message" placeholder="Brief overview of your case or enquiry..."></textarea></div>
       <div class="form-group"><label class="form-label">Preferred Call Back Time</label><input type="text" class="form-input" id="f-time" placeholder="e.g. Monday morning, Tuesday afternoon"></div>
+      <input type="text" id="f-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button class="form-submit" onclick="submitForm()">Request Call Back &rarr;</button>
       <p class="form-note">All enquiries are treated in strict confidence. Your details will not be shared with any third party.</p>
       <div class="form-success" id="form-success"><p><strong>Thank you &mdash; your request has been received.</strong><br>We will call you back at your preferred time. For urgent matters email simon@rivermeadpartnership.co.uk directly.</p></div>
@@ -506,40 +507,29 @@ function submitForm() {
   const email = document.getElementById('f-email').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
   if(!name || !email || !phone) { alert('Please complete your name, email and phone number.'); return; }
-  const org = document.getElementById('f-org').value;
-  const claim_type = document.getElementById('f-type').value;
-  const message = document.getElementById('f-message').value;
-  const preferred_time = document.getElementById('f-time').value;
-
-  const emailBody = `
-New call back request from rivermeadpartnership.co.uk<br><br>
-<strong>Name:</strong> ${name}<br>
-<strong>Email:</strong> ${email}<br>
-<strong>Phone:</strong> ${phone}<br>
-<strong>Organisation:</strong> ${org || 'Not provided'}<br>
-<strong>Claim Type:</strong> ${claim_type || 'Not specified'}<br>
-<strong>Preferred Call Back Time:</strong> ${preferred_time || 'Not specified'}<br>
-<strong>Message:</strong><br>${message || 'No message provided'}
-  `.trim();
-
-  fetch('https://api.brevo.com/v3/smtp/email', {
+  const btn = document.querySelector('.form-submit');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  fetch('https://crm.rivermeadpartnership.co.uk/website-contact', {
     method: 'POST',
-    headers: {
-      'accept': 'application/json',
-      'api-key': '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',
-      'content-type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      sender: { name: 'Rivermead Website', email: 'simon@rivermeadpartnership.co.uk' },
-      to: [{ email: 'simon@rivermeadpartnership.co.uk', name: 'Simon Dorrell' }],
-      replyTo: { email: email, name: name },
-      subject: `Call Back Request — ${name} — ${claim_type || 'General Enquiry'}`,
-      htmlContent: emailBody
+      name, email, phone,
+      org: document.getElementById('f-org').value,
+      claim_type: document.getElementById('f-type').value,
+      message: document.getElementById('f-message').value,
+      preferred_time: document.getElementById('f-time').value,
+      website: (document.getElementById('f-website') || {}).value || ''
     })
-  }).catch(() => {});
-
-  document.getElementById('form-success').style.display = 'block';
-  document.querySelector('.form-submit').style.display = 'none';
+  }).then(r => r.json().then(d => ({ ok: r.ok && d.ok, d })))
+    .then(({ ok, d }) => {
+      if (!ok) throw new Error(d.error || '');
+      document.getElementById('form-success').style.display = 'block';
+      btn.style.display = 'none';
+    })
+    .catch(err => {
+      btn.disabled = false; btn.innerHTML = 'Request Call Back &rarr;';
+      alert((err && err.message) || 'Sorry, we could not send your request. Please email simon@rivermeadpartnership.co.uk.');
+    });
 }
 </script>
 <style>
