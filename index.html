@@ -38,13 +38,14 @@ nav{
 }
 .nav-logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:var(--white);letter-spacing:0.02em;line-height:1.2}
 .nav-logo span{color:var(--gold-light);display:block;font-size:10px;font-weight:400;font-family:'DM Sans',sans-serif;letter-spacing:0.15em;text-transform:uppercase;margin-top:2px}
-.nav-links{display:flex;gap:36px;align-items:center}
+.nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:13px;letter-spacing:0.05em;transition:color 0.2s;font-weight:400}
 .nav-links a:hover{color:var(--gold-light)}
 .nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:10px 22px;font-weight:500!important;letter-spacing:0.08em!important;font-size:12px!important;text-transform:uppercase;transition:background 0.2s!important}
 .nav-cta:hover{background:var(--gold-light)!important}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .nav-toggle span{width:24px;height:1.5px;background:white;display:block;transition:0.3s}
+@media(max-width:1240px){.nav-links{display:none}.nav-toggle{display:flex}}
 
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:68px}
 .hero-left{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:80px 8%;position:relative;overflow:hidden}
@@ -230,6 +231,7 @@ footer{background:var(--navy);padding:40px 5%;display:flex;align-items:flex-star
     <a href="#process">Process</a>
     <a href="blog.html">Insights</a>
     <a href="fees.html">Fees</a>
+    <a href="ai-consultancy.html">AI Consultancy</a>
     <a href="#contact" class="nav-cta">Request a Call</a>
   </div>
   <div class="nav-toggle" onclick="toggleMenu(this)">
@@ -348,6 +350,7 @@ footer{background:var(--navy);padding:40px 5%;display:flex;align-items:flex-star
       <div class="service-title">AI Consultancy for Businesses</div>
       <p class="service-body">Independent advice on bringing artificial intelligence into your business: where it genuinely adds value, how to implement it safely, and what can go wrong. We cover the risks of invented facts and citations, confidential and personal data under UK GDPR, regulatory exposure including FCA Consumer Duty, and liability for AI-made decisions, alongside the real gains in speed and consistency. Our advice comes from practice: we design and run AI research and document-analysis systems in our own work.</p>
       <div class="service-tags"><span class="service-tag">AI Strategy</span><span class="service-tag">Implementation</span><span class="service-tag">Risk &amp; Compliance</span></div>
+      <a href="ai-consultancy.html" style="display:inline-block;margin-top:18px;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;text-decoration:none">Read about AI consultancy &rarr;</a>
     </div>
   </div>
   <div class="reveal" style="background:var(--navy);margin-top:2px;padding:36px 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
@@ -479,6 +482,7 @@ footer{background:var(--navy);padding:40px 5%;display:flex;align-items:flex-star
     <a href="#services">Services</a>
     <a href="blog.html">Insights</a>
     <a href="fees.html">Fees</a>
+    <a href="ai-consultancy.html">AI Consultancy</a>
     <a href="#contact">Contact</a>
     <a href="mailto:simon@rivermeadpartnership.co.uk">Email Us</a>
     <a href="privacy.html">Privacy Policy</a>
